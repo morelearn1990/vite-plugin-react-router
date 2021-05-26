@@ -1,0 +1,4 @@
+{
+    "extends": ["plugin:prettier/recommended"],
+    "ignorePatterns": ["dist", "**/__*__/**", "node_modules"]
+}
