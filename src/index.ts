@@ -17,11 +17,9 @@ function ViteReactRouter(userOptions: UserOptions): Plugin {
             filesDir: routesDir,
             extensions,
             exclude,
-            // onFilterFile: (filePath: string) => {
-            //     // console.log("filePath", filePath);
-            //     // const content = fs.readFileSync(filePath);
-            //     return true;
-            // },
+            onFilterFile: (filePath: string) => {
+                return true;
+            },
             onGeneratedClient: (trees) => {
                 const routes = generateRoutes(trees);
                 const { stringRoutes } = stringifyRoutes(routes);

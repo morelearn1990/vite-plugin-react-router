@@ -20,13 +20,10 @@ function generatedFile(tree: GeneratorTree, parentPath: string): RouteFile {
 
     const currentPath = makePath(parentPath, filename);
     if (filename == "index") {
-        console.log("currentPath", currentPath);
     }
     return { path: currentPath, file: makeFilePath(tree.relativePath) };
 }
 function generateRoutesRecurse(tree: GeneratorTree, parentPath: string, isRoot: boolean): RouteFile[] {
-    console.log("generateRoutesRecurse", tree);
-
     let generatedRoutes: RouteFile[] = [];
     if (!tree.children || tree.children.length <= 0) return generatedRoutes;
 

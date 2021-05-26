@@ -19,8 +19,6 @@ export const stringifyRoutes = (routes: RouteFile[]): { stringRoutes: string } =
 };
 
 export const assembleCode = (stringRoutes: string) => {
-    console.log("stringRoutes", stringRoutes);
-
     return `
         import React, { PropsWithoutRef, ComponentType } from "react";
         import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
