@@ -37,7 +37,6 @@
     },
     "dependencies": {
         "dree": "^2.6.1",
-        "esbuild": "^0.12.1",
         "vite-plugin-files": "^1.0.3"
     },
     "peerDependencies": {

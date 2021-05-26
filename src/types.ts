@@ -1,4 +1,4 @@
-import { ComponentType } from "react";
+import type { ViteDevServer } from "vite";
 import type { PageDirOptions } from "vite-plugin-files";
 
 export interface RouteFile {
@@ -41,4 +41,6 @@ interface Options {
 
 export type UserOptions = Partial<Options>;
 
-export interface ResolvedOptions extends Options {}
+export interface ResolvedOptions extends Options {
+    devServer?: ViteDevServer;
+}
