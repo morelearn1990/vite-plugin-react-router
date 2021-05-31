@@ -65,13 +65,13 @@ export default defineConfig({
 // └── src
 //     └── pages
 //         └── article
-//             └──id$.tsx
+//             └──$id$.tsx
 //         └── user
 //             └── $id
 //                 └──edit.tsx
 // 会得到一下的路由配置
 [
-    { exact: true, path: "/article/id?", component: "/src/pages/article/id$.tsx" },
+    { exact: true, path: "/article/:id?", component: "/src/pages/article/$id$.tsx" },
     { exact: true, path: "/user/:id/edit", component: "/src/pages/user/$id/edit.tsx" }
 ];
 ```
