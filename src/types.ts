@@ -32,11 +32,6 @@ interface Options {
      * @default ["components"]
      */
     exclude?: RegExp[];
-    /**
-     * import components asynchronously?
-     * @default false
-     */
-    async?: boolean;
 }
 
 export type UserOptions = Partial<Options>;
