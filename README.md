@@ -25,12 +25,15 @@ yarn add vite-plugin-react-router -D
 ### 配置
 
 ```ts
+
+// 以下配置为默认配置
 import RouterPlugin from "vite-plugin-react-router";
 export default defineConfig({
     plugins: [
         RouterPlugin({
             routesDir: [{ baseRoute: "", dir: "src/pages" }],
-            extensions: ["tsx", "jsx"]
+            extensions: ["tsx"]
+            exclude:[/components/]
         })
     ]
 });
