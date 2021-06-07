@@ -39,7 +39,7 @@ export default defineConfig({
 });
 ```
 
-### 约定是路由规则
+### 约定式路由规则
 
 ```js
 // { baseRoute: "", dir: "src/pages" }
