@@ -1,4 +1,4 @@
-import { RouteFile } from "./types";
+import { RouteFile, ResolvedOptions } from "./types";
 
 function stringifyRoute(route: RouteFile): string {
     const { path, file, exact, routes } = route;
@@ -18,10 +18,14 @@ export const stringifyRoutes = (routes: RouteFile[]): { stringRoutes: string } =
     return { stringRoutes: `[${routes.map((el) => stringifyRoute(el)).join(",\n")}]` };
 };
 
-export const assembleCode = (stringRoutes: string) => {
+export const assembleCode = (stringRoutes: string, hash: boolean): string => {
+    const createHistoryString = hash ? "createHashHistory" : "createBrowserHistory";
+
     return `
         import React, { PropsWithoutRef, ComponentType } from "react";
-        import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+        import { Router, Switch, Route, Link } from "react-router-dom";
+        import { ${createHistoryString} } from "history";
+
         import loadable from "@loadable/component";
         
         export interface RouteConfig {
@@ -53,10 +57,12 @@ export const assembleCode = (stringRoutes: string) => {
             );
         }
 
+        export const history = ${createHistoryString}()
+
         export const routes = ${stringRoutes}
         
         export default function RouterRoot() {
-            return <Router>{renderRoute(routes)}</Router>;
+            return <Router history={history}>{renderRoute(routes)}</Router>;
         }
     `;
 };

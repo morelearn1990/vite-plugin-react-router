@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import RouteRoot from "virtual:generated-routes";
+import RouteRoot, { history } from "virtual:generated-routes";
 import "./index.css";
 import App from "./App";
 
-// console.log("files", files);
+// console.log("history", history);
 
 ReactDOM.render(
     <React.StrictMode>

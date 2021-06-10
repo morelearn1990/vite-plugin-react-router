@@ -31,7 +31,12 @@ interface Options {
      * List of path globs to exclude when resolving files.
      * @default ["components"]
      */
-    exclude?: RegExp[];
+    exclude: RegExp[];
+    /**
+     * Enable or not HashRouter .
+     * @default false
+     */
+    hash: boolean;
 }
 
 export type UserOptions = Partial<Options>;

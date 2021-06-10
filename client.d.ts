@@ -1,3 +1,4 @@
+import { History } from "history";
 declare module "virtual:generated-routes" {
     import { ComponentType } from "react";
     const RouteRoot: ComponentType;
@@ -8,5 +9,6 @@ declare module "virtual:generated-routes" {
         routes?: RouteConfig[];
     }
     export type routes = RouteConfig[];
+    export const history: History;
     export default RouteRoot;
 }

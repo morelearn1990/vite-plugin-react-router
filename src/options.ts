@@ -4,12 +4,14 @@ export function resolveOptions(userOptions: UserOptions): ResolvedOptions {
     const {
         routesDir = [{ dir: "src/pages", baseRoute: "" }],
         extensions = ["tsx"],
-        exclude = [/components/]
+        exclude = [/components/],
+        hash = false
     } = userOptions;
 
     return Object.assign({}, userOptions, {
         routesDir,
         extensions,
-        exclude
+        exclude,
+        hash
     });
 }
