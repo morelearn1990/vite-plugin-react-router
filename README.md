@@ -145,6 +145,16 @@ ReactDOM.render(<RouteRoot />, document.getElementById("root"));
 // 这样，如果访问 /foo，/ 和 /users 都不能匹配，会 fallback 到 404 路由，通过 src/pages/404.tsx 进行渲染。
 ```
 
+### 常见问题
+
+-   1、ts 提示：找不到模块“virtual:generated-routes”或其相应的类型声明。
+
+    > tsconfig.json 配置，将 `vite-plugin-react-router/client` 放入到 tsconfig.json `types` 配置里面
+
+-   2、eslint 提示：Unable to resolve path to module 'virtual:generated-routes'.eslintimport/no-unresolved。
+
+    > 在 `import RouteRoot, { history, routes } from "virtual:generated-routes";` 这行上增加 `// eslint-disable-next-line import/no-unresolved`
+
 ## git 提交规范(Angular 规范)
 
 > 1.  feat 新增一个功能
