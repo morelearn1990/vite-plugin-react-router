@@ -39,6 +39,23 @@ export default defineConfig({
 });
 ```
 
+### 使用
+
+```ts
+import React from "react";
+import ReactDOM from "react-dom";
+import RouteRoot, { history, routes } from "virtual:generated-routes";
+import "./index.css";
+import App from "./App";
+
+// 自定义 history
+// console.log("history", history);
+// 生成的 routes
+// console.log("routes", routes);
+
+ReactDOM.render(<RouteRoot />, document.getElementById("root"));
+```
+
 ### 约定式路由规则
 
 ```js
