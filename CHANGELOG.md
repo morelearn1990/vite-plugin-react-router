@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/morelearn1990/vite-plugin-react-router/compare/1.1.0...1.1.1) (2021-06-10)
+
+### Bug Fixes
+
+-   fix client.d.ts ([3746267](https://github.com/morelearn1990/vite-plugin-react-router/commit/37462671a6eca51ad124d57497abcf81d327cfe7))
+
 # [1.1.0](https://github.com/morelearn1990/vite-plugin-react-router/compare/1.0.0...1.1.0) (2021-06-10)
 
 ### Bug Fixes
