@@ -1,5 +1,4 @@
 import type { Plugin } from "vite";
-import {} from "vite";
 import filesPlugin from "vite-plugin-files";
 import { ResolvedOptions, UserOptions } from "./types";
 import { resolveOptions } from "./options";
@@ -16,7 +15,7 @@ function VitePluginReactRouter(userOptions: UserOptions): Plugin {
         filesDir: routesDir,
         extensions,
         exclude,
-        // TODO 对非组件文件进行过滤
+        // TODO 对非默认导出JSX的组件进行过滤
         onFilterFile: () => {
             return true;
         },

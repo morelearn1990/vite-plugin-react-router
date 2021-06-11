@@ -4,7 +4,6 @@ import type { PageDirOptions } from "vite-plugin-files";
 export interface RouteFile {
     path: string;
     file: string;
-    // component: string;
     exact?: boolean;
     routes?: RouteFile[];
 }

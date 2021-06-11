@@ -8,10 +8,5 @@ export function resolveOptions(userOptions: UserOptions): ResolvedOptions {
         hash = false
     } = userOptions;
 
-    return Object.assign({}, userOptions, {
-        routesDir,
-        extensions,
-        exclude,
-        hash
-    });
+    return Object.assign({}, userOptions, { routesDir, extensions, exclude, hash });
 }
