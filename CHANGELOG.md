@@ -1,3 +1,9 @@
+## [1.1.3](https://github.com/morelearn1990/vite-plugin-react-router/compare/1.1.2...1.1.3) (2021-06-11)
+
+### Bug Fixes
+
+-   fix build error ([1c65010](https://github.com/morelearn1990/vite-plugin-react-router/commit/1c65010551eb9ea387a2f6b418a2867f5df75e40))
+
 ## [1.1.2](https://github.com/morelearn1990/vite-plugin-react-router/compare/1.1.1...1.1.2) (2021-06-11)
 
 ### Bug Fixes
