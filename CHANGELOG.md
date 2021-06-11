@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/morelearn1990/vite-plugin-react-router/compare/1.1.1...1.1.2) (2021-06-11)
+
+### Bug Fixes
+
+-   修复类型提示错误 ([4ceb9e0](https://github.com/morelearn1990/vite-plugin-react-router/commit/4ceb9e01352f8ce8b296156f7db69c2b0ef58545))
+
 ## [1.1.1](https://github.com/morelearn1990/vite-plugin-react-router/compare/1.1.0...1.1.1) (2021-06-10)
 
 ### Bug Fixes
