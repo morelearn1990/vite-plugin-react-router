@@ -1,4 +1,5 @@
 import type { Plugin } from "vite";
+import { transform } from "esbuild";
 import filesPlugin from "vite-plugin-files";
 import { ResolvedOptions, UserOptions } from "./types";
 import { resolveOptions } from "./options";
@@ -28,11 +29,16 @@ function VitePluginReactRouter(userOptions: UserOptions): Plugin {
         }
     });
 
+    let command: string;
+
     return {
         name,
         enforce,
         resolveId,
-        configResolved,
+        configResolved(config) {
+            command = config.command;
+            configResolved(config);
+        },
         configureServer(server) {
             options.devServer = server;
             configureServer && configureServer(server);
@@ -40,7 +46,14 @@ function VitePluginReactRouter(userOptions: UserOptions): Plugin {
         load,
         async transform(_code: string, id: string) {
             if (id === "/generated-routes") {
-                return await options.devServer?.transformWithEsbuild(_code, "/generated-routes", { loader: "tsx" });
+                const esbuildResult =
+                    command == "serve"
+                        ? await options.devServer?.transformWithEsbuild(_code, "/generated-routes.tsx", {
+                              loader: "tsx"
+                          })
+                        : await transform(_code, { loader: "tsx" });
+
+                return esbuildResult?.code;
             }
         }
     };
