@@ -1,3 +1,9 @@
+# [1.2.0](https://github.com/morelearn1990/vite-plugin-react-router/compare/1.1.3...1.2.0) (2021-07-14)
+
+### Features
+
+-   增加 loading、404 组件配置和优化 ([d82f6ec](https://github.com/morelearn1990/vite-plugin-react-router/commit/d82f6ec4448692083aa35e467b32add1c0b24632))
+
 ## [1.1.3](https://github.com/morelearn1990/vite-plugin-react-router/compare/1.1.2...1.1.3) (2021-06-11)
 
 ### Bug Fixes
