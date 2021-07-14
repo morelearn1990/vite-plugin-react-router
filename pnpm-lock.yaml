@@ -80,7 +80,7 @@ importers:
       react: ^17.0.2
       react-dom: ^17.0.2
       typescript: ^4.2.4
-      vite: 2.2.2
+      vite: ^2.2.2
       vite-plugin-react-router: workspace:*
       vite-plugin-restart: ^0.0.2
     dependencies:
@@ -96,9 +96,9 @@ importers:
       cross-env: 7.0.3
       nodemon: 2.0.7
       typescript: 4.2.4
-      vite: 2.2.2
+      vite: registry.nlark.com/vite/2.3.7
       vite-plugin-react-router: link:../..
-      vite-plugin-restart: 0.0.2_vite@2.2.2
+      vite-plugin-restart: 0.0.2_vite@2.3.7
 
 packages:
 
@@ -2809,12 +2809,6 @@ packages:
     hasBin: true
     requiresBuild: true
 
-  /esbuild/0.9.7:
-    resolution: {integrity: sha512-VtUf6aQ89VTmMLKrWHYG50uByMF4JQlVysb8dmg6cOgW8JnFCipmz7p+HNBl+RR3LLCuBxFGVauAe2wfnF9bLg==}
-    hasBin: true
-    requiresBuild: true
-    dev: true
-
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
     engines: {node: '>=6'}
@@ -3524,7 +3518,7 @@ packages:
     optional: true
 
   /function-bind/1.1.1:
-    resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
+    resolution: {integrity: sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=, tarball: function-bind/download/function-bind-1.1.1.tgz}
     dev: true
 
   /functional-red-black-tree/1.0.1:
@@ -6386,10 +6380,10 @@ packages:
     dev: true
 
   /resolve/1.20.0:
-    resolution: {integrity: sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==}
+    resolution: {integrity: sha1-YpoBP7P3B1XW8LeTXMHCxTeLGXU=, tarball: resolve/download/resolve-1.20.0.tgz}
     dependencies:
-      is-core-module: 2.4.0
-      path-parse: 1.0.7
+      is-core-module: registry.nlark.com/is-core-module/2.4.0
+      path-parse: registry.nlark.com/path-parse/1.0.7
     dev: true
 
   /resolve/2.0.0-next.3:
@@ -7430,27 +7424,14 @@ packages:
       vite: 2.3.7
     dev: false
 
-  /vite-plugin-restart/0.0.2_vite@2.2.2:
+  /vite-plugin-restart/0.0.2_vite@2.3.7:
     resolution: {integrity: sha512-WZ2Qp8Jo83wqBcZFQo481JchQcNgEYLIjd3NbhwPXr/mbg1mUC7hCMCrvafF5WcEQPChd7agx6fBm8RYrRR46A==}
     peerDependencies:
       vite: ^2.0.0-beta.69
     dependencies:
       chalk: 4.1.1
       micromatch: 4.0.4
-      vite: 2.2.2
-    dev: true
-
-  /vite/2.2.2:
-    resolution: {integrity: sha512-Y0IMdu+YuKsisJPk6NaEwEQC7FFfLQSN97ZTE4gvrELrk8dGjTFslhNCG8wkdzMSLCzfOdpCMT8cPXAhqzkPfg==}
-    engines: {node: '>=12.0.0'}
-    hasBin: true
-    dependencies:
-      esbuild: 0.9.7
-      postcss: 8.3.1
-      resolve: 1.20.0
-      rollup: 2.51.1
-    optionalDependencies:
-      fsevents: 2.3.2
+      vite: registry.nlark.com/vite/2.3.7
     dev: true
 
   /vite/2.3.7:
@@ -7711,4 +7692,94 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: true
+
+  registry.nlark.com/esbuild/0.12.8:
+    resolution: {integrity: sha1-rJDad8s7+/SauBUgC873/+GjNI8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/esbuild/download/esbuild-0.12.8.tgz?cache=0&sync_timestamp=1625549365795&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fesbuild%2Fdownload%2Fesbuild-0.12.8.tgz}
+    name: esbuild
+    version: 0.12.8
+    hasBin: true
+    requiresBuild: true
+    dev: true
+
+  registry.nlark.com/fsevents/2.3.2:
+    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fsevents/download/fsevents-2.3.2.tgz}
+    name: fsevents
+    version: 2.3.2
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    dev: true
+    optional: true
+
+  registry.nlark.com/has/1.0.3:
+    resolution: {integrity: sha1-ci18v8H2qoJB8W3YFOAR4fQeh5Y=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/has/download/has-1.0.3.tgz}
+    name: has
+    version: 1.0.3
+    engines: {node: '>= 0.4.0'}
+    dependencies:
+      function-bind: 1.1.1
+    dev: true
+
+  registry.nlark.com/is-core-module/2.4.0:
+    resolution: {integrity: sha1-jp/I4VAnsBFBgCbpjw5vTYYwXME=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-core-module/download/is-core-module-2.4.0.tgz}
+    name: is-core-module
+    version: 2.4.0
+    dependencies:
+      has: registry.nlark.com/has/1.0.3
+    dev: true
+
+  registry.nlark.com/nanoid/3.1.23:
+    resolution: {integrity: sha1-90QIbOfCvEfuCoRyV01ceOQYOoE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/nanoid/download/nanoid-3.1.23.tgz}
+    name: nanoid
+    version: 3.1.23
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+    dev: true
+
+  registry.nlark.com/path-parse/1.0.7:
+    resolution: {integrity: sha1-+8EUtgykKzDZ2vWFjkvWi77bZzU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/path-parse/download/path-parse-1.0.7.tgz}
+    name: path-parse
+    version: 1.0.7
+    dev: true
+
+  registry.nlark.com/postcss/8.3.1:
+    resolution: {integrity: sha1-cfOAFRwif4O4mClKRkgfaJ+Gtwo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/postcss/download/postcss-8.3.1.tgz?cache=0&sync_timestamp=1623919589070&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fpostcss%2Fdownload%2Fpostcss-8.3.1.tgz}
+    name: postcss
+    version: 8.3.1
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      colorette: 1.2.2
+      nanoid: registry.nlark.com/nanoid/3.1.23
+      source-map-js: registry.nlark.com/source-map-js/0.6.2
+    dev: true
+
+  registry.nlark.com/rollup/2.51.1:
+    resolution: {integrity: sha1-h7zUCV/nmxTJvsDtx/+kTkgn95M=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/rollup/download/rollup-2.51.1.tgz?cache=0&sync_timestamp=1626009718404&other_urls=https%3A%2F%2Fregistry.nlark.com%2Frollup%2Fdownload%2Frollup-2.51.1.tgz}
+    name: rollup
+    version: 2.51.1
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: registry.nlark.com/fsevents/2.3.2
+    dev: true
+
+  registry.nlark.com/source-map-js/0.6.2:
+    resolution: {integrity: sha1-C7XeYxtBz72mz7qL0FqA79/SOF4=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/source-map-js/download/source-map-js-0.6.2.tgz}
+    name: source-map-js
+    version: 0.6.2
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  registry.nlark.com/vite/2.3.7:
+    resolution: {integrity: sha1-MCOJJBk2dGXhrxc5V4+GY9BCQ7I=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/vite/download/vite-2.3.7.tgz}
+    name: vite
+    version: 2.3.7
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      esbuild: registry.nlark.com/esbuild/0.12.8
+      postcss: registry.nlark.com/postcss/8.3.1
+      resolve: 1.20.0
+      rollup: registry.nlark.com/rollup/2.51.1
+    optionalDependencies:
+      fsevents: registry.nlark.com/fsevents/2.3.2
     dev: true
