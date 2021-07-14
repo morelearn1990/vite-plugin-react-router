@@ -1,15 +1,20 @@
 import type { ViteDevServer } from "vite";
-import type { PageDirOptions } from "vite-plugin-files";
+import type { PageDirOptions, GeneratorTree } from "vite-plugin-files";
 
 export interface RouteFile {
     path: string;
     file: string;
+    loading?: string;
     exact?: boolean;
     routes?: RouteFile[];
 }
 
 export interface RouteDirOptions extends PageDirOptions {
     baseRoute: string;
+}
+
+export interface GeneratorTreeMap {
+    [key: string]: GeneratorTree;
 }
 
 /**
@@ -36,6 +41,14 @@ interface Options {
      * @default false
      */
     hash: boolean;
+    /**
+     * not found 404 filePath
+     */
+    notFound?: string;
+    /**
+     * component async import loading filePath
+     */
+    loading?: string;
 }
 
 export type UserOptions = Partial<Options>;

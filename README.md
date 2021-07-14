@@ -33,11 +33,23 @@ export default defineConfig({
         RouterPlugin({
             routesDir: [{ baseRoute: "", dir: "src/pages" }],
             extensions: ["tsx"]
-            exclude:[/components/]
+            exclude:[/components/],
+            hash:false,
+            loading:'',
+            notFound:''
         })
     ]
 });
 ```
+
+| 参数       | 解释                                                                            | 默认值           | 是否比传 |
+| ---------- | ------------------------------------------------------------------------------- | ---------------- | -------- |
+| routesDir  | 路由配置，指定路由文件根目录和路由路径根目录                                    | 无               | 是       |
+| extensions | 路由组件的文件扩展                                                              | `["tsx"]`        | 否       |
+| exclude    | 排除在外的文件或文件路径的匹配正则                                              | `[/components/]` | 否       |
+| hash       | 指定是否弃用 hash 路由模式                                                      | `false`          | 否       |
+| loading    | 配置指定加载组件，可以用于骨架屏。                                              |                  | 否       |
+| notFound   | 配置指定 404 组件。如果没有指定 404 组件，则本级目录默认使用上级目录的 404 组件 |                  | 否       |
 
 ### 使用
 

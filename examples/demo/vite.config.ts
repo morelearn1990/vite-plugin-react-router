@@ -8,7 +8,9 @@ export default defineConfig({
     plugins: [
         RouterPlugin({
             routesDir: [{ baseRoute: "", dir: "src/pages" }],
-            extensions: ["tsx", "jsx"]
+            extensions: ["tsx", "jsx"],
+            notFound: "/src/options/_notFound",
+            loading: "/src/options/_loading"
         }),
         reactRefresh(),
         Restart({ restart: ["../../dist/*.js"] })

@@ -21,10 +21,9 @@ function VitePluginReactRouter(userOptions: UserOptions): Plugin {
             return true;
         },
         onGeneratedClient: (trees) => {
-            const routes = generateRoutes(trees);
-            const { stringRoutes } = stringifyRoutes(routes);
-            const code = assembleCode(stringRoutes, options.hash);
-            // console.log("code", code);
+            const routes = generateRoutes(trees, options);
+            const { stringRoutes, stringImport } = stringifyRoutes(routes);
+            const code = assembleCode(stringRoutes, stringImport, options.hash);
             return code;
         }
     });
