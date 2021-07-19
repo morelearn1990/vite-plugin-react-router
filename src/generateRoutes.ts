@@ -97,14 +97,14 @@ function generateRoutesRecurse(
 
     // 存在 _layout 文件时生成嵌套路由
     if (specialFilesMap["_layout"]) {
-        generatedRoutes = [
-            {
-                path: currentPath,
-                file: makeFilePath(specialFilesMap["_layout"].relativePath),
-                routes: generatedRoutes,
-                loading: makeFilePath(specialFilesMap["_loading"].relativePath)
-            }
-        ];
+        const layoutRoute: RouteFile = {
+            path: currentPath,
+            file: makeFilePath(specialFilesMap["_layout"].relativePath),
+            routes: generatedRoutes
+        };
+
+        if (specialFilesMap["_loading"]) layoutRoute.loading = makeFilePath(specialFilesMap["_loading"].relativePath);
+        generatedRoutes = [layoutRoute];
     }
 
     return generatedRoutes;
